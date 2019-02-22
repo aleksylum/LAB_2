@@ -30,7 +30,7 @@ namespace LAB_2
 		{
 			try
 			{
-				if (r == 0 || c == 0) { data = null; }//{ throw new Exception("Невозможно создать матрицу с размерностью 0"); }
+				if (r == 0 || c == 0) { data = null; } //{ throw new Exception("Невозможно создать матрицу с размерностью 0"); }
 				Rows = Math.Abs(r);
 				Columns = Math.Abs(c);
 				data = new Double[Rows, Columns];
@@ -206,8 +206,8 @@ namespace LAB_2
 		public static Matrix operator *(Matrix m1, double d)
 		{
 			if (m1.IsEmpty)
-			{
-				return m1;
+			{             
+				return new Matrix(m1.Rows,m1.Columns);
 			}
 
 			int r = m1.Rows;
